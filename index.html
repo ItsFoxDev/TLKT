@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>FoxTools</title>
-  <link rel="stylesheet" href="./style.css">
-  <script defer src="./script.js"></script>
-</head>
-<body>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ItsFoxDev/fa-turbo/css/all.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <head>
+      <meta charset="UTF-8">
+      <title>TLKT</title>
+      <link rel="stylesheet" href="./style.css">
+      <script defer src="./script.js"></script>
+      <link rel="icon" href="logo.png">
 
-<input style="display:none" type="file" id="iconv" accept="image/*, .avif"></input>
-<canvas style="display:none" id="myCanvas" width="1" height="1"></canvas>
-<!--<input style="display:none" type="file" id="2round" accept="image/*, .avif"></input>
-<canvas style="display:none" id="roundc" width="1" height="1"></canvas> -->
-<input style="display:none" type="file" id="b64in" onchange="b64();"/>
-<div id="rcints" style="display:none;">
-  <input type="file" id="rifileInput" accept="image/*" onchange="beginRound()">
-    <div id="ripreview-container">
-      <img id="ripreview" src="#" alt="Preview Image">
-    </div>
-    <input type="range" id="riradiusInput" min="0" max="100" value="0" onchange="roundCorners();">
-    <button onclick="roundCorners()">Round Corners</button>
-    <a id="ridownloadLink" style="display: inline;">Download</a>
-</div>
 
-<h1 center>FoxTools</h1>
-<span class="sep"><span><i class="far fa-image"></i> Image tools</span></span>
-<div class="btns">
-  <button onclick="document.getElementById('rifileInput').click();"><i class="far fa-brackets-round"></i> Round image</button>
-  <button onclick="document.getElementById('b64in').click();"><i class="far fa-brackets-curly"></i> Data URL</button>
-</div>
-<span class="sep"><span><i class="far fa-shuffle"></i> Image converters</span></span>
-<div class="btns cfts">
-  <button onclick="icoe='png';document.getElementById('iconv').click();">PNG</button>
-  <button onclick="icoe='jpg';document.getElementById('iconv').click();">JPG</button>
-  <button onclick="icoe='webp';document.getElementById('iconv').click();">WEBP</button>
-  <button onclick="icoe='ico';document.getElementById('iconv').click();">ICO</button>
-</div>
-<img id="destination"></img>
-  
-</body>
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ItsFoxDev/fa-turbo/css/all.min.css" />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    </head>
+    <body>
+
+      <input style="display:none" type="file" id="iconv" accept="image/*, .avif"></input>
+      <canvas style="display:none" id="myCanvas" width="1" height="1"></canvas>
+      <input style="display:none" type="file" id="b64in" onchange="b64();"/>
+      <div id="rcints" style="display:none;">
+        <input type="file" id="rifileInput" accept="image/*" onchange="beginRound()">
+          <div id="ripreview-container">
+            <img id="ripreview" src="#" alt="Preview Image">
+          </div>
+          <input type="range" id="riradiusInput" min="0" max="100" value="0" onchange="roundCorners();">
+          <button onclick="roundCorners()">Round Corners</button>
+          <a id="ridownloadLink" style="display: inline;">Download</a>
+      </div>
+
+      <window>
+        <div id="header">
+          <img width="48" height="48" src="logo.png" draggable="false" onmousedown="return false">
+          <h1 center>TLKT</h1>
+        </div>
+        <div id="inner">
+          <span class="category"><i class="far fa-file"></i> File tools</span>
+          <div class="btns">
+            <button onclick="document.getElementById('b64in').click();"><i class="far fa-brackets-curly"></i> Data URL</button>
+          </div>
+
+
+          <span class="category"><i class="far fa-image"></i> Image tools</span>
+          <div class="btns">
+            <button onclick="document.getElementById('rifileInput').click();"><i class="far fa-brackets-round"></i> Round image</button>
+          </div>
+
+
+          <span class="category"><i class="far fa-shuffle"></i> Convert image to...</span>
+          <div class="btns cfts">
+            <button onclick="icoe='png';document.getElementById('iconv').click();">PNG</button>
+            <button onclick="icoe='jpg';document.getElementById('iconv').click();">JPG</button>
+            <button onclick="icoe='webp';document.getElementById('iconv').click();">WEBP</button>
+            <button onclick="icoe='ico';document.getElementById('iconv').click();">ICO</button>
+          </div>
+        </div>
+      </window>
+      <img id="destination"></img>
+    </body>
 </html>
