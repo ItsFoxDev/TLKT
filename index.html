@@ -33,24 +33,26 @@
           <h1 center>TLKT</h1>
         </div>
         <div id="inner">
+
+
           <span class="category"><i class="far fa-file"></i> File tools</span>
           <div class="btns">
-            <button onclick="document.getElementById('b64in').click();"><i class="far fa-brackets-curly"></i> Data URL</button>
+            <button onclick="document.getElementById('b64in').click();"><i class="far fa-brackets-curly"></i> To data URL</button>
           </div>
 
-
-          <span class="category"><i class="far fa-image"></i> Image tools</span>
+          <span class="category"><i class="far fa-image"></i> Convert image to...</span>
           <div class="btns">
             <button onclick="document.getElementById('rifileInput').click();"><i class="far fa-brackets-round"></i> Round image</button>
+            <button class="cfts" onclick="icoe='png';document.getElementById('iconv').click();">PNG</button>
+            <button class="cfts" onclick="icoe='jpg';document.getElementById('iconv').click();">JPG</button>
+            <button class="cfts" onclick="icoe='webp';document.getElementById('iconv').click();">WEBP</button>
+            <button class="cfts" onclick="icoe='ico';document.getElementById('iconv').click();">ICO</button>
           </div>
 
-
-          <span class="category"><i class="far fa-shuffle"></i> Convert image to...</span>
-          <div class="btns cfts">
-            <button onclick="icoe='png';document.getElementById('iconv').click();">PNG</button>
-            <button onclick="icoe='jpg';document.getElementById('iconv').click();">JPG</button>
-            <button onclick="icoe='webp';document.getElementById('iconv').click();">WEBP</button>
-            <button onclick="icoe='ico';document.getElementById('iconv').click();">ICO</button>
+          <span class="category"><i class="far fa-text"></i> Text tools</span>
+          <div class="btns">
+            <button onclick="ue();"><i class="far fa-paperclip"></i> URL Encode</button>
+            <button onclick="de();"><i class="far fa-paperclip"></i> URL Decode</button>
           </div>
         </div>
       </window>

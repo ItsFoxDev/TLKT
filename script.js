@@ -173,3 +173,22 @@ function createRoundedImage(imageUrl, radius, callback) {
 
   image.src = imageUrl;
 }
+
+async function ue(){
+  const {value:te} = await Swal.fire({
+    title: 'Enter text to encode',
+    input: 'text',
+    inputAutoFocus: true
+  })
+  copy(encodeURI(te));
+  done("Copied!");
+}
+async function de(){
+  const {value:te} = await Swal.fire({
+    title: 'Enter text to decode',
+    input: 'text',
+    inputAutoFocus: true
+  }) 
+  copy(decodeURI(te));
+  done("Copied!");
+}

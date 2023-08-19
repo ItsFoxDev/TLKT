@@ -15,6 +15,7 @@
   * JPG
   * WEBP
   * ICO
+* 🆕 URL encode/decode
 
 More (maybe) coming soon!
 

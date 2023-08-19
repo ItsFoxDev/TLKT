@@ -85,9 +85,8 @@ button:active {
   flex-wrap: wrap;
   gap: 10px;
 }
-.cfts button {
+.cfts {
   width: 75px;
-  height:40px;
 }
 window{
   -webkit-box-shadow: inset -5px -5px 15px 5px #ff9100; 
